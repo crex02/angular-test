@@ -24,4 +24,21 @@ export class ElaborationService {
     // console.log(array);
     return array; 
   }
+
+  filterAnomalies(numbers:number[], top:number, bottom:number){
+    for (let i = 0; i < numbers.length; i++) {
+      const element = numbers[i];
+
+      if (element>top) {
+        numbers[i] = top;
+      }
+      if (element<bottom) {
+        numbers[i] = bottom
+      }
+    }
+    return numbers;
+  }
+
+
+
 }
